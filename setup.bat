@@ -7,7 +7,7 @@ if "%ERRORLEVEL%" neq "0" (
   exit /b %ERRORLEVEL%
 )
 
-set RUN="\"%~dp0run.bat\" \"%%1\""
+set RUN="\"%~dp0linksymbolic.exe\" \"%%1\""
 
 reg add HKEY_CLASSES_ROOT\*\shell\linksymbolic\command /t REG_SZ /d %RUN% /f
 reg add HKEY_CLASSES_ROOT\Folder\shell\linksymbolic\command /t REG_SZ /d %RUN% /f
